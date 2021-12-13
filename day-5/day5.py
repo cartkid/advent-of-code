@@ -54,7 +54,7 @@ class lineSegment:
         if self.coord2.y > biggestY:
             biggestY = self.coord2.y
         
-        biggestCoordinate = coordinate(f"{biggestX},{biggestY}")        
+        biggestCoordinate = coordinate(f"{biggestX},{biggestY}")
         biggestCoordinate.printCoordinate("FURTHEST COORD")
         return biggestCoordinate
 
@@ -121,12 +121,11 @@ class diagram:
 
             xIsIncreasing = True
             if biggerY == line.coord2.y:
-                xIsIncreasing = True if line.coord1.x < line.coord2.x else False
+                xIsIncreasing = line.coord1.x < line.coord2.x
                 currX = line.coord1.x
             elif biggerY == line.coord1.y:
-                xIsIncreasing = True if line.coord1.x > line.coord2.x else False
+                xIsIncreasing = line.coord1.x > line.coord2.x
                 currX = line.coord2.x
-
 
             xDiff = abs(line.coord1.x - line.coord2.x)
             yDiff = abs(line.coord1.y - line.coord2.y)
@@ -147,7 +146,6 @@ class diagram:
         return count
 
 
-
 def day5(fileName: str):
     result = 0
 
@@ -155,17 +153,13 @@ def day5(fileName: str):
     allLines = file.read().splitlines()
 
     currDiagram: diagram = None
-    
-
     for line in allLines:
         currLine = lineSegment(line)
         if currDiagram == None:
             currDiagram = diagram()
-        
         currDiagram.addLine(currLine)
 
     result = currDiagram.getNumberOfPointsToAvoid()
-    print(f"Points to avoid: {result}")
-    return result
+    return f"Points to avoid: {result}"
 
 print(day5("input.txt"))
