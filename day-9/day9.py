@@ -1,6 +1,7 @@
-from typing import List
-from collections import OrderedDict 
+from collections import OrderedDict
 from dataclasses import dataclass
+from typing import List
+
 
 @dataclass
 class coordinates:

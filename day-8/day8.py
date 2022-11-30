@@ -1,5 +1,5 @@
 
-from collections import OrderedDict 
+from collections import OrderedDict
 
 
 def getEasySegment(entry:str) -> int:
