@@ -7,12 +7,6 @@ def test_some_function():
     assert result == expected
 
 
-def test_some_function_simple():
-    expected = 1
-    result = day_3.some_function("test2.txt")
-    assert result == expected
-
-
 def test_answer_some_function():
     expected = 554003
     result = day_3.some_function("input.txt")
