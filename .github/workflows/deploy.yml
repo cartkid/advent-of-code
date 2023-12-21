@@ -1,4 +1,4 @@
-name: Deploy BOLT
+name: Run all tests
 
 on:
   push:
