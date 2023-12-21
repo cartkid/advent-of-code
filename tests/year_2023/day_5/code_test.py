@@ -8,18 +8,18 @@ def test_some_function():
 
 
 def test_answer_some_function():
-    expected = 20117
+    expected = 309796150
     result = day.some_function("input.txt")
     assert result == expected
 
 
 def test_part_two_some_function():
-    expected = 30
+    expected = 46
     result = day.some_function("test.txt", True)
     assert result == expected
 
 
 def test_answer_part_two_some_function():
-    expected = 13768818
+    expected = 50716416
     result = day.some_function("input.txt", True)
     assert result == expected
